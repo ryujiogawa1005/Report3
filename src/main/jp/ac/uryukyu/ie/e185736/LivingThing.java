@@ -1,10 +1,41 @@
 package jp.ac.uryukyu.ie.e185736;
 
 public class LivingThing {
-    String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
+    private String name;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
+
+    public String getname(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getHitPoint(){
+        return hitPoint;
+
+    }
+    public void setHitPoint(int hitPoint){
+        this.hitPoint = hitPoint;
+
+    }
+    public int getAttack(){
+        return attack;
+    }
+    public void setAttack(int attack){
+        this.attack = attack;
+    }
+    public boolean getDead(){
+        return dead;
+    }
+    public void setDead(boolean dead){
+        this.dead = dead;
+    }
+
+
+
+
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
@@ -33,6 +64,7 @@ public class LivingThing {
 
     }
     public void wounded(int damage){
+        
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
